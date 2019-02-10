@@ -45,7 +45,9 @@ Vec3 operator-(const Vec3 &vec);
 
 float dot(const Vec3 &vec1, const Vec3 &vec2);
 Vec3 cross(const Vec3 &vec1, const Vec3 &vec2);
+float magnitude(const Vec3 &vec);
 Vec3 normalized(const Vec3 &vec);
+Vec3 clamp(const Vec3 &vec, float min, float max);
 
 std::ostream& operator<<(std::ostream &os, const Vec3 &vec);
 

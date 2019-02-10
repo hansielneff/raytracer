@@ -1,6 +1,6 @@
 #include "vec3.h"
 
-#include "math.h"
+#include <cmath>
 
 Vec3 operator+(const Vec3 &vec1, const Vec3 &vec2) {
     return Vec3(
@@ -95,6 +95,14 @@ float magnitude(const Vec3 &vec) {
 
 Vec3 normalized(const Vec3 &vec) {
     return vec / magnitude(vec);
+}
+
+Vec3 clamp(const Vec3 &vec, float min, float max) {
+    return Vec3(
+        fmin(max, fmax(vec.x(), min)),
+        fmin(max, fmax(vec.y(), min)),
+        fmin(max, fmax(vec.z(), min))
+    );
 }
 
 std::ostream& operator<<(std::ostream &os, const Vec3 &vec) {
