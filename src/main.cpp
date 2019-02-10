@@ -44,8 +44,8 @@ int main() {
     CoordinateFrame camFrame(Vec3(0, 0, 0), Vec3(0, 0, -1), Vec3(0, 1, 0));
     PointLight light(Vec3(0, 1, 3));
 
-    constexpr int width = 1024;
-    constexpr int height = 512;
+    constexpr int width = 1920;
+    constexpr int height = 1080;
     constexpr int comps = 3;
     constexpr int quality = 100;
     unsigned char *imgData = new unsigned char[width * height * comps];
